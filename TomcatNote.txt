@@ -1,0 +1,247 @@
+1、修改Tomcat的应用程序目录
+\conf\Catalina\localhost目录下加入"app_name.xml"，内容为
+<Context path="/app_name" docBase="abs_path\app_name" debug="0" privileged="true" reloadable="true"></Context>
+
+2、JSP文件基本格式
+<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1></h1>
+</body>
+</html>
+
+3、CSS样式
+自定义：
+.bg {backgroup-image: url(bg.gif);} 
+… 
+<body class="bg"> 
+
+重定义：
+td {color: #000099; font-size: 9pt}
+
+链接样式：
+a:link：设置正常状态下的链接的显示样式； 
+a:active：设置当鼠标单击该链接时的样式； 
+a:visited：设置已经访问过的链接显示样式； 
+a:hover：设置当鼠标放置（没有单击）在链接上时的显示样式。
+a:link {color: #FF3366; font-family: "宋体"; text-decoration:none;}
+a:hover {color: #FF6600; font-family: "宋体"; text-decoration:underline;}
+a:visited {font-family: "宋体"; color: #339900; text-decoration:none;}
+
+文本样式：
+Letter-spacing  定义文本字符之间的间隔距离 
+
+Text-decoration  该属性设置文本是否有下划线、上划线或者删除线等 
+Underline  下划线 
+Overline  上划线 
+Line-throught  中间线（删除线） 
+
+Text-align  设置文本的水平对齐方式，例如左对齐、右对齐、居中或者两端对齐 
+left（文本的左对齐）、right（右对齐）、（center）居中以及 justify（两端对齐）
+
+Text-indent  设置文本的首行缩进 
+Line-height  该属性允许设置文本基线之间的间隔距离 
+
+Color  定义文字的显示颜色 
+Background-color  设置某元素的背景颜色，例如页面背景
+.text { background-color: #ffcc00;} 
+
+背景图片样式：
+Background-image  设置背景图片 
+body { background-image:url(images/bg.gif);} 
+
+Background-repeat  设置背景图片是否重复显示 
+Repeat-x  图片可以在横向方向上重复 
+Repeat-y  图片可以在纵向方向上重复显示
+Repeat  图片可以在横向纵向上重复 
+No-repeat  设置图片不可以重复。
+
+Background-position  设置背景图片在页面中显示的位置 
+left（左端）、right（居右端）、center（水平居中）、top（上
+对齐）、bottom（下对齐）和 middle（垂直居中）
+
+边框样式： 
+Border  边框（包括四条边）的属性设置
+Border-top  上边框属性设置 
+Border-left  左边框属性设置 
+Border-right  右边框属性设置 
+Border-bottom 下边框属性设置
+None  无边框，即边框不可见 
+
+Dotted  边框由点组成 
+Dash  边框由短线组成 
+Solid  边框由实线组成 
+Double  边框由两条双实线组成 
+Groove  边框带有立体感的凹槽组成 
+Ridge  边框由脊形线条组成 
+Inset  边框是由一个内嵌的立体边框组成
+Outset  边框外嵌一个立体边框 
+
+鼠标光标样式：
+Hand  手型鼠标状态 
+Crosshair  交叉十字型 
+Text  文本选择符号 
+Wait  Windows的漏沙形状
+Default  默认的鼠标形状 
+Help  带问号的鼠标 
+e-resize  向东的箭头 
+n-resize  向北的箭头 
+Ne-resize  指向东北方向的箭头
+Nw-resize  指向西北方向的箭头
+w-resize  向西的箭头 
+Sw-resize  指向西南方向的箭头
+s-resize  向南的箭头 
+Se-resize  指向东南方向的箭头
+
+img { cursor:help;} 
+
+定位样式：
+Position  指定元素使用绝对定位还是相对定位，属性值：absolute（绝对）、relative（相对） 
+Top  元素距离页面顶部的距离 
+Left  元素距离页面左侧的距离 
+Width  元素的宽度 
+Height  元素的高度 
+Z-index  指定元素（或者叫层）之间先后顺序或者覆盖关系，值高就会覆盖值低的元素（或层）
+Clip  限定只显示裁切出来的区域，该区域为矩形，可以使用两个点来决定其位置 
+overflow  当元素中的内容超出元素所设定的范围时： 
+		Visible：元素的大小和内容都可以显示出来 
+		Hidden：超出元素范围的内容会隐藏 
+		Scroll：不管内容是否超出范围，都设定一个滚动条 
+		Auto：当内容超出元素范围时，才显示滚动条 
+visibility  该属性是针对元素嵌套使用的，各属性值包含的意思如下： 
+		Inherit：嵌套元素（子元素）继承被嵌套元素（父元素），父元素可见，子元素也可见 
+		Visible：无论父元素是否可见，子元素都可见 
+		Hidden：无论父元素是否可见，子元素都不可见 
+		
+区块属性  描述 
+Width  设置某一区块对象的宽度 
+Height  设置一区块对象的高度 
+Float  让区块中的文字环绕在四周 
+Clear  指定在某一个元素的某一边是否可以允许有文字或者对象环绕 
+Padding  设置区块的边框和文字内容之间可以插入多少空间距离，它共有四个属性：Padding-top、padding-bottom、
+padding-left、padding-right，分别用于设置上下左右的填充距离 
+Margin  设置该区域对象距离浏览器窗口的四边距离，它同样有四个属性：Margin-top、margin-bottom、margin-left、
+margin-right。
+
+列表属性  描述 
+List-style-type  设置引导列表项的符号类型（可以英文字母或者罗马数字等） 
+List-style-image  可以指定一个图片来引导列表项 
+List-style-position 指定各列表项的缩进程度：Outside：列表贴近左侧边框；Inside：列表缩进 
+
+属性值所指定的符号类型  描述 
+Disc  以“●"符号作为列表项的引导放置在前面 
+Circle  以“○"符号作为列表项的引导 
+Square  以“■"符号作为列表项的引导 
+Decimal  以普通的阿拉伯数字作为列表项的引导 
+Lower-roman  以小写罗马数字作为引导 
+Upper-roman  以大写罗马数字作为引导 
+Lower-alpha  以小写英文字母作为引导 
+Upper-alpha  以大写英文字母作为引导 
+none  不显示任何项目符号 
+
+ol { 
+list-style-type:upper-roman; 
+list-style-position:outside; 
+} 
+
+4、JSP语法
+
+JSP表达式格式
+<%= Java表达式/变量 %>
+XML：<jsp:expression>…Java表达式…</jsp:expression>
+
+JSP小脚本格式
+<%...任意的Java代码…%>
+XML：<jsp:scriptlet>…Java代码…</jsp:scriptlet>
+
+JSP声明格式
+<%!...Java声明…%>
+
+JSP指令元素
+<%@ 指令名[…一个或者多个指令属性…] %>
+<%@ page
+[ language="java" ]
+[ extends="package.class" ]
+[ import="{package.class | package.*}, ..." ]
+[ session="true | false" ]
+[ buffer="none | 8kb | sizekb" ]
+[ autoFlush="true | false" ]
+[ isThreadSafe="true | false" ]
+[ info="text" ]
+[ isELIgnored="true | false" ]
+[ isErrorPage="true | false" ]
+[ errorPage="relativeURL" ]
+[ contentType="mimeType [; charset=characterSet ]" | "text/html; charset=ISO-8859-1" ]
+%>
+
+language  指定JSP页面使用的脚本语言  Java
+extends  JSP被编译成Servlet的Java程序，该属性设置Servlet继承的超类 HttpJspBase类
+import  通过该属性来引用脚本语言中使用到的类文件  无
+session  设置session用来共享信息的有效性  true（有效）
+buffer  定义输出流缓冲区大小  默认8KB
+autoFlush  设置输出流的缓冲区是否自动清除  true（自动）
+isThreadSafe  设置该JSP页面是否能够同时处理超过一个以上的页面请求  true（可以）
+info  用来指定JSP页面的信息  无
+isELIgnored  设置该JSP页面是否支持表达式语言（EL，在高级部分介绍） false（支持）
+isErrorPage  设置该页面是否作为其他页面的错误处理  false（不作为）
+errorPage  和isErrorPage属性配套使用，设置异常处理的JSP页面URL  无
+contentType  用来指定MIME类型以及JSP页面所采用的编码方式  text/html,ISO-8859-1
+
+引用标签库
+<%@ taglib uri="tagLibraryURL" prefix="tagPrefix" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %> 
+<sql:query var="books"> 
+    Select * from books 
+</sql:query> 
+
+JSP 标准动作元素的使用格式为：<jsp:  标记名>
+<jsp:useBean>：定义 JSP 页面使用一个 JavaBean 实例。 
+<jsp:setProperty>：设置一个 JavaBean 中的属性值。 
+<jsp:getProperty>：从 JavaBean 中获取到一个属性值。 
+<jsp:include>：在 JSP 页面包含一个外在文件。 
+<jsp:forward>：把到达的请求转交另一个页面进行处理。 
+<jsp:param>：用于传递参数值。 
+<jsp:plugin>：用于指定在客户端浏览器中插入插件的属性。 
+<jsp:params>：用于向 HTML 页面上的插件传递参数值。 
+<jsp:fallback>：指定客户端不支持插件运行的情况该如何处理。 
+
+<jsp:useBean id="name" class="package.class" scope="…" type="…" />
+<jsp:useBean id="myName" ... >  
+	<jsp:setProperty name="myName" property="someProperty" ... />
+</jsp:useBean>
+
+<jsp:include page="…url…" flush="true|false" />
+<jsp:include page="…url…" flush="true|false" > 
+	<jsp:param …./> 
+</jsp:include>
+
+<jsp:forward page="/utils/errorReporter.jsp" />  
+<jsp:forward page="<%= someJavaExpression %>" />
+
+<jsp:param name="…名称…" value="…值…" />
+
+<jsp:plugin type="…applet 或者 JavaBean…" code="…" codebase="…" archive="…"…> 
+  … 
+</jsp:plugin> 
+<jsp:fallback> 
+  ...  客户端浏览器不支持插件运行时显示html或者JSP代码  ... 
+</jsp:fallback>
+
+
+request对象：
+getMethod()：返回 HTTP请求信息中所使用到的方法名称； 
+getServletPath()：返回请求信息中调用 Servlet 的 URL 部分； 
+getQueryString()：返回 HTTP GET请求信息中 URL之后的查询字符串； 
+getContentType()：返回请求实体的 MIME 类型； 
+getProtocol()：返回请求信息中的协议名名字与版本号； 
+getPathInfo()：返回有关任何路径信息； 
+getServletName()：返回接受请求的服务器主机； 
+getServletPort()：返回服务器的端口号； 
+getRemoteHost()：返回提交请求的客户机的规范名字； 
+getRemoteAddr()：返回提交请求的客户机的 IP地址； 
