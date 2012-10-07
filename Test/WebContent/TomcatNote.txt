@@ -245,3 +245,11 @@ getServletName()：返回接受请求的服务器主机；
 getServletPort()：返回服务器的端口号； 
 getRemoteHost()：返回提交请求的客户机的规范名字； 
 getRemoteAddr()：返回提交请求的客户机的 IP地址； 
+
+java环境变量配置
+//	JAVA_HOME C:\Program Files\Java\jdk1.7.0_06
+//	classpath .;%JAVA_HOME%\lib;
+//	path %JAVA_HOME%\bin;
+
+JDBC的jar文件配置
+把jar文件拷贝到tomcat的lib目录中，重启tomcat即可
